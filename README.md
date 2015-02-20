@@ -17,6 +17,12 @@
 > 2015-01-19 12:38:24,482 SECURE POST Data (server.com):
 charset_test=%E2%82%AC%2C%C2%B4%2C%E2%82%AC%2C%C2%B4%2C%E6%B0%B4%2C%D0%94%2C%D0%84&locale=en_US&email=user%40email.com&pass=password&charset_test=%E2%82%AC%2C%C2%B4%2C%E2%82%AC%2C%C2%B4%2C%E6%B0%B4%2C%D0%94%2C%D0%84&lsd=H2cF2
 
- For more information about this script check the blog post
-
  I think i have more to do latter.
+ 
+For any comment or to say just Hi contact me on em [ @ ] em616 [ dot ] com
+
+My Blog: http://blog.em616.com
+
+Follow me on Twitter : https://twitter.com/EneaMadani
+
+Thank you
