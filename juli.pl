@@ -17,7 +17,7 @@ system "iptables --delete-chain";
 system "iptables --table nat --delete-chain";
 
 #Making a Firewall, setting iptables roule to redirect port 80 to 5254
-print color("bold red"), "Setting up the iptables roulle\n", color("reset");
+print color("bold red"), "Setting up the iptables rule\n", color("reset");
 print color("bold red"), ". . ..\n", color("reset");
 system "iptables -t nat -A PREROUTING -p tcp --destination-port 80 -j REDIRECT --to-port 5254";
 #Port Fawarding
